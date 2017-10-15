@@ -2,17 +2,17 @@
 
 // clock and not clock wires goes pared
 int CE0 = 12;//blue wire
-int CE1 = 13;//red wire 
+int CE1 = 11;//red wire 
 
 //data bus pins are yellow
-int D0 = 0; // ***is marked with yellow tube
-int D1 = 1;
-int D2 = 2;
-int D3 = 3;
-int D4 = 4;
-int D5 = 5;
-int D6 = 6;
-int D7 = 7;
+int D0 = 2; // ***is marked with yellow tube
+int D1 = 3;
+int D2 = 4;
+int D3 = 5;
+int D4 = 6;
+int D5 = 7;
+int D6 = 8;
+int D7 = 9;
 
 //read and write pins
 int readPin = 20; //yellow wire
@@ -98,3 +98,79 @@ void setDigit4(bool d7, bool d6, bool d5, bool d4, bool d3, bool d2, bool d1, bo
   setData(d7, d6, d5, d4, d3, d2, d1, d0);
 }
 
+
+//****************************************************
+//**********some debug stuff**************************
+void set0toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+}
+void set1toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 0, LOW, LOW, 1);
+}
+void set2toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 0, LOW, 1, 0);
+}
+void set3toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 0, 0, 1, 1);
+}
+void set4toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 0, 1, 0, 0);
+}
+void set5toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 0, 1, 0, 1);
+}
+void set6toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 0, 1, 1, 0);
+}
+void set7toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 0, 1, 1, 1);
+}
+void set8toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 1, 0, 0, 0);
+}
+void set9toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit4(LOW, 0, 1, 1, 1, 0, 0, 1);
+}
+void set10toAll(){
+  setDigit1(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit2(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+  setDigit3(LOW, 0, 1, 1, 0, LOW, LOW, 1);
+  setDigit4(LOW, 0, 1, 1, LOW, LOW, LOW, LOW);
+}
+void setSto0 () {
+  setDigit1(LOW, HIGH, LOW, HIGH, LOW, LOW, HIGH, HIGH);
+}
+
+void setTto0 () {
+  setDigit1(LOW, HIGH, LOW, HIGH, LOW, HIGH, LOW, LOW);
+}
